@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <title>Simple Scratch Game</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+<body>
+<div class="container">
+	<h1>Making a Simple Scratch Game - by Tuan Tran</h1>
+<a href="http://youtu.be/7D948LKg_WU">Watch the demo video here.</a>
+<h2>Planning</h2>
+<p>
+	-When coding a project, whether it is a small and simple game or an assignment involving the use of complex data structures, it is always best to hit the scratch paper before hitting the keyboard. Planning and designing your code is a very important step to a bug free and beautifully written program; I usually split at least one third of my dedicated time for a project into the design process itself. 
+</p>
+<p>-Suppose I want to make a simple game using the Scratch software. First I decide what kind of game I want to play, the characters (or should I say Sprites) involved, and how the game is won/lost. After some time thinking, I decide that the game would involve a Sprite that I use to move around, a flag of some kind that would win me the game if I touch it with my Sprite, and some obstacles in the middle. </p>
+<p>-Now, after you figured out the layout, you still shouldn’t get to coding just yet. Let’s get a simple drawing of our objects, and don’t worry if it’s not the best drawing, you can look at mines and feel better.
+</p>
+<p>-Now, after you figured out the layout, you still shouldn’t get to coding just yet. Let’s get a simple drawing of our objects, and don’t worry if it’s not the best drawing, you can look at mines and feel better.
+</p>
+<p>Such beauty, I know. But now we have a good layout of where our objects will be placed, and how our obstacles will move once the game starts.
+</p>
+
+<h2>Design</h2>
+<p>Now that we have the design, let’s start writing some Pseudocode. Writing good pseudocode is also very important. Real code is not that important, because with good pseudocode, one can easily translate it into a specific language like Java, C, etc. So now we write some pseudocode for each one of our objects.
+</p>
+<p>My Object: After some thinking, I decided that my object would be moved by arrow keys, display a winning message when I touch the flag, a losing message when I touch an obstacle, and start out at the bottom left of the screen. 
+</p>
+<p>
+<ul>
+	<li>1 place object at bottom left</li>
+	<li>2 while game is not over</li>
+	<li>
+		<ul>
+			<li>1   if left arrow pressed</li>
+			<li>
+				<ul>
+					<li>1   move object left
+</li>
+				</ul>
+			</li>
+			<li>1   if left arrow pressed</li>
+			<li>
+				<ul>
+					<li>1   move object left
+</li>
+				</ul>
+			</li>
+			<li>2   if right arrow pressed 
+</li>
+			<li>
+				<ul>
+					<li>3   if up arrow pressed
+</li>
+				</ul>
+			</li>
+			<li>1   move object up</li>
+			<li>
+				<ul>
+					<li>4   if down arrow pressed
+</li>
+				</ul>
+			</li>
+			<li>1   move object down</li>
+			<li>
+				<ul>
+					<li>5   if reached flag
+</li>
+				</ul>
+			</li>
+<li>1   move object down</li>
+			<li>
+				<ul>
+					<li>5   if reached flag
+</li>
+				</ul>
+			</li>
+			<li>6   if touch obstacle
+
+ </li>
+			<li>
+				<ul>
+					<li>1   display losing message
+</li>
+				</ul>
+			</li>
+		</ul>
+	</li>
+</ul>
+
+</p>
+<p>Obstacle: I want my obstacle to move with some basic physics behind it, velocity and acceleration. I also want the object to reverse its direction when touching the bound.
+</p>
+<p>1 create and set my velocity and acceleration
+2 place obstacle at desired position
+3 while game is not over
+1   add acceleration to velocity 
+2   move the object using velocity
+3   if touching bound
+    1    set current velocity to negative
+    2    move the object using velocity</p>
+<p>Flag: I want to spice things up a bit and have the flag move around randomly every 5 seconds instead of just staying still.
+</p>
+<p>1 place obstacle at desired position
+2 set i to 0
+3 while game is not over
+  1   if i divides 5 evenly
+       1  move object to a random position on screen
+   2  increment i
+</p>
+
+<h2>Implemetation</h2>
+<p>-Since I am in charge of understanding and providing details on the Scratch software, I will be implementing the game above using Scratch. A couple things to note is that I chose a button instead of a flag since it did not exist in the given list. Also, the obstacles were a bit harder to dodge than I thought. Besides the little clip showing the game running, I’ve included a download for it so you can take a look and try on your own machine.
+</p>
+</div>
+
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+   
+</body>
+</html>
